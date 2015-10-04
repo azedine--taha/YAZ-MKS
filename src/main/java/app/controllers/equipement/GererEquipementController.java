@@ -37,7 +37,7 @@ public class GererEquipementController {
 	}
 	
 	@RequestMapping( value="/createEquipement",method=RequestMethod.POST)
-	public String Register(@ModelAttribute("typVign")  equipementEntity equipementEntity,BindingResult result,Model model){
+	public String Register(@ModelAttribute("equipement")  equipementEntity equipementEntity,BindingResult result,Model model){
 		if(result.hasErrors()){
 			return "createEquipement";
 		}
@@ -53,7 +53,7 @@ public class GererEquipementController {
 		return this.index(model);
 	}
 	@RequestMapping(value="/updateEquipement/{id}",method=RequestMethod.POST)
-	public String updateEquipement(@ModelAttribute("Vign")  equipementEntity equipementEntity,@PathVariable int id){
+	public String updateEquipement(@ModelAttribute("equipement")  equipementEntity equipementEntity,@PathVariable int id){
 		equipementService.validateEquipement(equipementEntity);
 		return "redirect:/gererEquipement/createEquipement.html";
 	}

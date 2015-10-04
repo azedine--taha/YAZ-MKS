@@ -16,9 +16,9 @@
       			<tbody class="searchable">
 					<c:forEach items="${listEquipement}" var="list">
 						<tr>
-<!-- 							<td> -->
-<%-- 							    <form:checkbox path="idEquipement" id="idEquipement" value="idEquipement" onclick="javascript:alert(this.value);"/> --%>
-<!-- 							</td> -->
+							<td>
+							    <input type="checkbox" id="idEquipement" value="${list.idEquipement}" onclick="javascript:alert(this.value);"/>
+							</td>
 							<td>${list.code}</td>
 							<td>${list.libelle }</td>
 							<td align="center">
