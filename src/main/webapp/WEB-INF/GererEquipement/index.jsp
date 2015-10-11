@@ -1,3 +1,4 @@
+<%@page import="app.controllers.equipement.EquipementDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../layout/include.jsp"%>
@@ -5,12 +6,6 @@
   		<form:hidden path="idEquipement"  cssClass="input-large"/>
      <div class="row">
 		<div class="col-lg-8">
-		<c:if test="${param.success eq true }">
-			<div class="alert alert-success">
-			  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			  <strong>Success!</strong> L'element  a été ajoute .
-			</div>
-		</c:if>
 		</div>
 	</div>
 	<div class="panel panel-primary">
@@ -26,6 +21,12 @@
         	<label for="TypeVignette " class="col-sm-2">Libelle  : </label>  
 	        <div class="col-sm-4"> 
 	         	<form:input path="libelle"  class="form-control"/>
+	        </div>
+        	</div>
+           <div class="form-group">
+        	<label for="TypeVignette " class="col-sm-2">Famille Equipement  : </label>  
+	        <div class="col-sm-2"> 
+	         	<form:select path="idFamille" class="form-control" items="${equipement.listFamille}" />
 	        </div>
         	</div>
 	         

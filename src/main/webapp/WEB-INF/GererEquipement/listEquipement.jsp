@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../layout/include.jsp"%>
-
+            
+<!-- <div class="col-sm-4">  -->
+<%-- 	<button class="btn btn-large btn-block btn-primary" type="submit" href="<spring:url value="/gererEquipement/createEquipement.html"/>">Ajouter</button> --%>
+<!-- </div> -->
+<br><br>
 <div class="panel panel-primary">
   <div class="panel-heading">List des equipements</div>
 	  	<div class="panel-body">
@@ -16,9 +20,9 @@
       			<tbody class="searchable">
 					<c:forEach items="${listEquipement}" var="list">
 						<tr>
-							<td>
-							    <input type="checkbox" id="idEquipement" value="${list.idEquipement}" onclick="javascript:alert(this.value);"/>
-							</td>
+<!-- 							<td> -->
+<%-- 							    <input type="checkbox" id="idEquipement" value="${list.idEquipement}" onclick="javascript:alert(this.value);"/> --%>
+<!-- 							</td> -->
 							<td>${list.code}</td>
 							<td>${list.libelle }</td>
 							<td align="center">
